@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Hello from "@/components/Hello";
+import ClientOnly from "@/components/ClientOnly";
+import Altogether from "@/components/Altogether";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +19,46 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ClientOnly>
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Hello />
+          <Altogether />
+        </ClientOnly>
+        {children}
+      </body>
     </html>
   );
 }
